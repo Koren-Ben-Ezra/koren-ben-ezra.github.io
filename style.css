@@ -6,7 +6,7 @@
 }
 html {
 	font-size: 10px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: sans-serif;
 	scroll-behavior: smooth;
 }
 a {
@@ -62,14 +62,10 @@ p {
 	color: white;
 	background-color: crimson;
 }
-.brand h1 {
-	font-size: 3rem;
-	text-transform: uppercase;
-	color: white;
-}
-.brand h1 span {
-	color: crimson;
-}
+
+
+
+
 
 /* Header section */
 #header {
@@ -82,7 +78,7 @@ p {
 }
 #header .header {
 	min-height: 8vh;
-	background-color: rgba(31, 30, 30, 0.24);
+	background-color: rgba(30, 30, 31, 0.24);
 	transition: 0.3s ease background-color;
 }
 #header .nav-bar {
@@ -94,6 +90,36 @@ p {
 	max-width: 1300px;
 	padding: 0 10px;
 }
+#header .nav-bar .brand a{
+	text-align: right;
+	direction: rtl;
+	font-family: sans-serif;
+	position: absolute;
+	text-align: right;
+	right: 0;
+	top: 0;
+	padding-right: 100px;
+	padding-top: 10px;
+	display: flex;
+	flex-direction: row-reverse;
+}
+#header .nav-bar .brand h1 {
+	font-size: 2rem;
+	letter-spacing: 0.13rem;
+
+	color: white;
+}
+#header .nav-bar .brand h2 {
+	font-size: 1.5rem;
+	letter-spacing: 0.4rem;
+	color: orange;
+}
+#header .nav-bar .brand img {
+	width: 90px; 
+	height: 100%;
+}
+
+
 #header .nav-list ul {
 	list-style: none;
 	position: absolute;
@@ -269,6 +295,8 @@ p {
 	text-align: right;
 	direction: ltr;
 	max-width: 1200px;
+	display: flex;
+	flex-direction: row-reverse;
 	margin: 0 auto;
 	padding: 100px 20px;
 }
@@ -279,11 +307,16 @@ p {
 }
 #about .col-right {
 	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items:flex-start;
+	direction: rtl;
 }
 #about .col-right h1{
 	font-size: 30px;
 }
 #about .col-right p{
+	text-align: right;
 	font-size: 20px;
 	margin-bottom: 20px;
 }
@@ -317,8 +350,16 @@ p {
 	padding: 100px 0;
 }
 #services .service-top {
-	max-width: 500px;
+	max-width: 1000px;
 	margin: 0 auto;
+}
+#services .service-top h1{
+	font-size: 40px;
+	font-weight: 600;
+}
+
+#services .service-top p{
+	font-size: 20px;
 }
 #services .service-bottom {
 	display: flex;
@@ -328,14 +369,10 @@ p {
 	margin-top: 50px;
 }
 #services .service-item {
-	flex-basis: 80%;
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	flex-direction: column;
 	padding: 30px;
 	border-radius: 10px;
-	background-image: url(./img/img-1.png);
+	width: 300px;
+	height: 200px;
 	background-size: cover;
 	margin: 10px 5%;
 	position: relative;
@@ -353,16 +390,11 @@ p {
 	opacity: 0.9;
 	z-index: -1;
 }
-#services .service-bottom .icon {
-	height: 80px;
-	width: 80px;
-	margin-bottom: 20px;
-}
+
 #services .service-item h2 {
 	font-size: 2rem;
 	color: white;
 	margin-bottom: 10px;
-	text-transform: uppercase;
 }
 #services .service-item p {
 	color: white;
